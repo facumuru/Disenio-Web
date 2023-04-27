@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+ 
+<script> 
+    function ej1()
+    {
+        var hola= document.getElementById("myp")
+        hola.innerHTML="Hello Word"
+    }
+    function ej2()
+    {
+       
+        var hello= document.getElementsByClassName("test") [0]  // Los getElementByClassName devuelven un array, por eso ponemos pos 0
+        hello.innerHTML="Hello word"
+    }
+    function ej3()
+        {
+            var body= document.getElementsByTagName("tbody")[0].insertRow(-1)
+            
+            let col1= body.insertCell(0) //let y var es lo mismo, creamos variable columna 1 y columna 2. 
+            col1.innerHTML="Hola"
+            let col2= body.insertCell(1)
+            col2.innerHTML="Mundo"
+            
+        }
+    function deleteRow()
+    {
+        var body= document.getElementsByTagName("tbody")[0].deleteRow(-1) //PONER QUE TE ELIMINE LA ULTIMA POSICION 
+        
+    }
+
+
+</script>
+    <title>TP</title>
+</head>
+<body>
+    <!-- EJERCICIO 1  -->
+    <button onclick="ej1()" >EJERCICIO 1</button>
+    <p id="myp" ></p>
+    <!-- EJERCICIO 2  -->
+    <button onclick="ej2()" > EJERCICIO 2 </button>
+    <p class="test"></p>
+     <p class="test"></p>
+     <!-- EJERCICIO 3  -->
+     <table style="border: 1px solid">
+        <thead>
+        <tr>
+            <th>FILA 1</th>
+            <th>FILA 2</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+        </table>
+        <br>
+        <button onclick="ej3()">Insert row</button>
+        <button onclick="deleteRow()">Delete row</button>
+       
+        
+
+
+</body>
+</html>
